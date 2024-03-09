@@ -1,0 +1,3 @@
+[submodule "libkeyfinder"]
+	path = libkeyfinder
+	url = https://github.com/mixxxdj/libkeyfinder
