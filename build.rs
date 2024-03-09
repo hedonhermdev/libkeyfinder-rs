@@ -2,7 +2,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let fftw3_dst = pkg_config::Config::new().atleast_version("3.3.10").probe("fftw3")?;
 
-    let keyfinder_dst = cmake::Config::new("libkeyfinder").configure_arg("-DBUILD_SHARED_LIBS=OFF").always_configure(true).build().join("build");
+    let keyfinder_dst = cmake::Config::new("libkeyfinder").configure_arg("-DBUILD_SHARED_LIBS=OFF").configure_arg("-DBUILD_TESTING=OFF").always_configure(true).build().join("build");
 
     println!("\n\n\n\nHEREJREKREKRJEJK");
     dbg!(&keyfinder_dst);
